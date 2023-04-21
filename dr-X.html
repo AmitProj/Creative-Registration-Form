@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dr.css">
+    <title>Dr-x</title>
+
+</head>
+<body>
+    <div class="container">
+        <div class="big-wall">
+                <div class="box img-wall ">
+                    
+                </div>
+                <div class="box content">
+                    <div class="heading">
+                        <h1>Dr<b class="b1">.</b><b class="b2">X</b></h1>
+                        <h1>professional <span class="chenge"></span></h1>
+                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.i fugit hic, quaerat dolorem. Cupiditate.</p> -->
+                        <button class="contact">Contact Now</button>
+                    </div>
+                    <div class="form">
+
+                        <form>
+                            <span class="close">Back</span>
+                            <h1>Contect</h1>
+                            <div class="dr-x">
+                                <div class="cover"></div>
+                                <h3>Dr-X</h3>
+                            </div>
+                            <div class="input-form">
+                            <div class="input"><label>Username<span class="star">*</span></label>
+                             <input type="text" name="name" placeholder="Client"></div>
+                            <div class="input"><label>Mobile N<span class="star">*</span></label>
+                                <input type="phone" name="phone" placeholder="Number"></div>
+                            <div class="input"><label>E-mail<span class="star">*</span></label>
+                                <input type="email" name="email" placeholder="E-mail"></div>
+                            <div class="input"><label>Subject<span class="star">*</span></label>
+                                <input type="text-area" name="text-area" placeholder="E-mail"></div>
+                            <input type="submit" name="submit" class="btn" value="submit">
+                        </div>
+                            <div class="more"></div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script>
+        const text= document.querySelector('.chenge');
+        const textload=()=>{
+            setTimeout(()=>{
+                text.textContent="Killer";
+            }, 0);
+            setTimeout(()=>{
+                text.textContent="Hunter";
+            }, 6000);
+            setTimeout(()=>{
+                text.textContent="Killer";
+            }, 12000);
+            
+            
+        } 
+        textload();
+        const heading= document.querySelector(".heading");
+        const contactBtn= document.querySelector(".contact");
+        const closeBtn= document.querySelector(".close");
+        const form= document.querySelector(".form");
+
+        contactBtn.addEventListener('click', ()=>{
+            form.classList.add('show')
+            heading.style.filter= 'blur(4px)'
+        })
+        closeBtn.addEventListener('click', ()=>{
+            form.classList.remove('show')
+            heading.style.filter= 'blur(0px)'
+        })
+
+       
+
+  
+
+    </script>
+</body>
+</html>

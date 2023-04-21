@@ -1,0 +1,319 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.big-wall{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: repeating-linear-gradient(180deg, hsl(0 0% 9% / 1), hsl(0 0% 13% / 1) 100%);
+  
+}
+.box{
+    flex:0 0 50%;
+    max-width: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.img-wall{
+background-image: url(./img/HAPE\ Teaser.png);
+background-repeat: no-repeat;
+background-position: center center;
+    
+}
+.box .content{
+background: repeating-linear-gradient(180deg, hsl(0 0% 9% / 1), hsl(0 0% 13% / 1) 100%);
+
+}
+.heading{
+position: relative  ;
+transition:02s ease-in-out;
+opacity: 1;
+visibility: visible;
+}
+button.contact {
+position: absolute;
+top: 36px;
+right: 100px;
+font-weight: 600;
+border: 2px solid #fd843d;
+padding: 12px 20px 8px 20px;
+border-radius: 0px;
+font-size: 20px;
+text-transform: uppercase;
+background: transparent;
+letter-spacing: 1px;
+color: #fd843d;
+transition: 0.5s ease-in;
+}button.contact:hover{
+    background: white;
+    color: #1f1f1f;
+    }
+.close{ 
+position: absolute;
+top: 43px;
+right: 100px;
+font-weight: 600;
+border: 2px solid #fd843d;
+padding: 12px 20px 8px 20px;
+border-radius: 0px;
+font-size: 20px;
+font-family: sans-serif;
+text-transform: uppercase;
+background: transparent;
+letter-spacing: 1px;
+color: #fd843d;
+transition: 0.5s ease-in;
+margin: 20px -8px;
+cursor: pointer;
+}.close:hover{
+    background: white;
+    color: #1f1f1f;
+    }
+
+
+.heading h1 {
+font-size: 80px;
+text-transform: uppercase;
+font-family: sans-serif;
+font-weight: 900;
+color: #fd843d;
+}
+.heading h1 .b1{color: rgb(255, 255, 255); font-weight: 900;}
+.heading h1 .b2{color: rgb(255, 255, 255); font-weight: 900;margin-left: 5px;}
+.heading h1:nth-child(2){
+color: white;
+font-size: 68px;
+}
+.chenge{
+position: relative;
+height: 100px;
+width:auto;
+display: inline-block;
+overflow: hidden;
+}
+.chenge::before{
+content: '';
+position: absolute;
+width: 100%;
+height: 100%;
+background: red;
+top: 0;
+left: 0;
+z-index: 1;border-left: 3px solid #fd843d;
+animation: step 06s ease-in-out infinite;
+background:repeating-linear-gradient(180deg, hwb(0 12% 92% / 1), hwb(0 13% 93% / 1) 100%);
+
+}
+@keyframes step{
+    40%, 60%{
+        left: 100%;
+    }100%{
+        left: 0%;
+    }
+}
+.form{
+position: absolute;
+width: 100%;
+height: 100%;
+background:repeating-linear-gradient(180deg, hwb(0deg 9.41% 90.59%), hwb(0deg 12.55% 87.45%) 100%);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 999;
+transition:02s ease-in-out;
+ visibility: hidden;
+opacity: 0;
+right: -100%;
+
+}
+.form.show{
+right: 0;
+visibility: visible;
+opacity: 1;
+transition: 02s ease-in-out;
+}
+.form.show .heading{
+    filter: blur(0.5px);
+}
+.form.hidde{
+    right: -100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 02s ease-in-out;
+    }
+form{
+width: 500px;
+height: 500px;
+right: -100%;
+
+}
+form h1{
+color: #1f1f1f;
+}
+
+.input{
+width: 100%;
+padding-bottom: 32px;
+display: flex;
+}
+.input-form{
+padding: 20px 20px;
+}
+.input-form input{
+width: 100%;
+height: 30px;
+background: transparent;
+border: none;
+outline: none;
+color: #fd843d;
+border-bottom: 2px solid #fd843d;
+}
+
+.input-form input::placeholder{
+visibility: hidden;
+}
+form h1{
+background:  #fd843d;
+clip-path: polygon(28% 0, 49% 93%, 100% 93%, 100% 100%, 0 100%, 0% 60%, 0 0);
+padding:10px;
+font-family: sans-serif;
+}
+.dr-x {
+padding: 20px;
+text-align: center;
+align-items: center;
+display: flex;
+}
+.cover {
+width: 50px;
+height: 50px;
+background:  #fd843d;
+border-radius: 100px;
+background-image: url(./img/HAPE\ Teaser.png);
+background-size: cover;
+border: 2px solid #fd843d;
+}
+h3 {
+font-size: 30px;
+font-family: sans-serif;
+padding: 0 11px;
+color: #fd843d;
+
+}
+label {
+font-size: 18px;
+font-family: sans-serif;
+font-weight: 300;
+letter-spacing: 1px;
+color: white;
+width: 140px;
+/* text-align: -webkit-right; */
+margin-top: 8px;
+}
+input.btn {
+display: block;
+width: 100%;
+height: 50px;
+padding: 6px 20px;
+font-size: 30px;
+text-transform: uppercase;
+font-weight: 800;
+text-align: end;
+clip-path: polygon(64% 0, 50% 93%, 0 93%, 0 100%, 100% 100%, 100% 88%, 100% 0);
+background: #fd843d;
+border: 2px solid #fd843d;
+color: #1f1f1f;
+transition: 0.5s ease;
+}
+input.btn:hover{
+border: 2px solid white;
+color: white;
+}
+.star{
+color: #fd843d;
+}
+@media (max-width:390px) {
+    .box{
+        flex: 0 0 100%;
+        max-width: 100%;
+        align-items: flex-end;
+    }
+    .big-wall{
+        display: block;
+    }
+    .box.content{
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+    }
+    .heading{
+        left: 40px;
+        bottom: 162px;
+    }
+    .heading h1{
+        font-size: 43px;
+        }
+    .heading h1:nth-child(2){
+        color: white;
+        font-size: 35px;
+        }
+        .chenge{
+            height: 40px;
+        }
+        .chenge::before {
+            content: '';
+            height: 56px;
+            border-top: 3px solid #fd843d;
+            border-left: 0;
+        }
+        button.contact {
+            position: absolute;
+            top: 200px;
+            right: 130px;
+            border: 3px solid #fd843d;
+
+        }
+        input.btn{
+             padding: 4px 6px 0px;;
+        }
+      
+        form{
+            margin: 100px 0 0 0 ;
+        }
+        form h1{
+            padding: 10px 6px;
+        }
+        .form{
+            bottom: -100%;
+            left: 0;
+            background: repeating-linear-gradient(180deg, hwb(0deg 9.41% 90.59% / 75%), hwb(0deg 12.55% 87.45%) 100%);
+        }
+        .form.show {
+            bottom: 0;
+        }
+        span.close {
+            top: 84%;
+            right: 152px;
+            border-radius: 100px;
+            border: 3px solid #fd843d;
+        }
+        @keyframes step{
+            40%, 60%{
+                top: 100%;
+            }100%{
+                top: 0%;
+            }
+        }
+}
